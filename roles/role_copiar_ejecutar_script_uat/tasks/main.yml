@@ -1,0 +1,17 @@
+- name: Crear directorio de UAT
+  file:
+    path: /tmp/uatgetinfo
+    state: directory
+    mode: 0700
+    
+- name: Envio de scripts UAT
+  copy:
+    src: files/iam_extract_global.sh
+    dest: /tmp/uatgetinfo
+    mode: 0500
+    force: yes
+
+- name: Ejecucion de script UAT
+  become: yes
+  become_method: sudo
+  shell: /tmp/uatgetinfo/iam_extract_global.sh -c IBM

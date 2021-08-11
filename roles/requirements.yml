@@ -1,0 +1,11 @@
+# socks tunnel
+- name: ansible-role-event-socks-tunnel
+  scm: 'git'
+  src: https://github.ibm.com/Continuous-Engineering/ansible-role-event-socks-tunnel.git
+  version: 20.5.0
+  
+# generic role for uploads to SFS
+- name: sfs_upload
+  scm: 'git'
+  src: https://github.ibm.com/Continuous-Engineering/ansible_role_sfs_upload.git
+  version: 1.1.0
