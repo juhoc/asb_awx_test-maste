@@ -14,4 +14,4 @@
 - name: Ejecucion de script UAT
   become: yes
   become_method: sudo
-  shell: /tmp/uatgetinfo/iam_extract_global.sh -c IBM
+  shell: /tmp/uatgetinfo/iam_extract_global.sh 2>/dev/null -c IBM
