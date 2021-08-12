@@ -16,6 +16,7 @@
   become_method: sudo
   shell: /tmp/uatgetinfo/iam_extract_global.sh 2>/dev/null -c IBM
   register: status_iam
+  failed_when: status_iam.rc not in [ 0, 1 ]
   
 - name: Imprime ejecucion del script iam
   debug:
