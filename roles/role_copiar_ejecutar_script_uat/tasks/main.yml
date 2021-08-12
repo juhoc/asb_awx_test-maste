@@ -15,3 +15,8 @@
   become: yes
   become_method: sudo
   shell: /tmp/uatgetinfo/iam_extract_global.sh 2>/dev/null -c IBM
+  register: status_iam
+  
+- name: Imprime ejecucion del script iam
+  debug:
+    msg: "{{ status_iam.stdout_lines }}"
